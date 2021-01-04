@@ -1,14 +1,14 @@
 {
-    "name": "election2018",
+    "name": "risingstories",
     "version": "1.0.0",
-    "description": "election2018",
-    "main": "index.js",
+    "description": "risingstories",
+    "main": "",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/risingstories/risingstories2021.git"
     },
     "author": "chu",
     "license": "ISC",
