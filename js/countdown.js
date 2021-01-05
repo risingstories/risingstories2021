@@ -1,8 +1,14 @@
 (function () {
+
     const second = 1000,
           minute = second * 60,
           hour = minute * 60,
-          day = hour * 24;
+          day = hour * 24,
+          $countdown = document.getElementById("countdown");
+
+          if(!$countdown){
+            return false;
+          }
   
     let birthday = "Apr 15, 2021 00:00:00",
         countDown = new Date(birthday).getTime(),
