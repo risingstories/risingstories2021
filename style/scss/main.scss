@@ -3,7 +3,7 @@ $red: #d6324e;
 $green: #50a691;
 $xs: "776px";
 $theme-color: #d6324e;
-$theme-color-darken: #6d1826;
+$theme-color-darken: #a54656;
 
 * {
     box-sizing: border-box;
@@ -11,6 +11,9 @@ $theme-color-darken: #6d1826;
 
 a {
     color: #444;
+    &:hover{
+        color: $theme-color-darken;
+    }
 }
 
 h1 {
@@ -49,9 +52,9 @@ body {
     }
     .flex-2 {
         width: 50%;
+        padding: 15px;
         @media (max-width: $xs) {
             width: 100%;
-            padding: 15px;
         }
     }
 
@@ -178,15 +181,19 @@ body {
 }
 
 .kv {
-    background-image: url(../../images/kv-bg.jpg);
-    background-size: auto 100%;
+    background-image: url(../../images/kv.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left top;
     position: relative;
+    height: 600px;
     @media (max-width: $xs) {
         margin-bottom: 25px;
+        height: auto;
+        background-image: url(../../images/kv-bg.jpg);
     }
     .kv-img {
+        opacity: 0;
         @media (max-width: $xs) {
             position: relative;
             margin: 0;
@@ -214,11 +221,21 @@ body {
         text-align: center;
 
         .countdown-box {
-            padding-top: 150px;
+            padding-top: 50px;
             padding-left: 50%;
             position: relative;
             padding-bottom: 150px;
             z-index: 1;
+
+            img{
+                max-height: 200px;
+                max-width: 100%;
+                &:nth-child(1){
+                    width: 100%;
+                    height: auto;
+                    max-height: none;
+                }
+            }
             @media (max-width: $xs) {
                 padding: 25px;
                 padding-bottom: 45px;
@@ -227,20 +244,19 @@ body {
             #countdown {
                 display: table;
                 margin: auto;
-                padding: 30px;
-                border: solid 3px #fff;
+                padding: 15px;
                 @media (max-width: $xs) {
                     width: 100%;
                     padding: 25px;
-                    background: #fff;
+                    //background: #fff;
                 }
             }
         }
         h1 {
-            font-size: 19px;
-            color: #eee;
-            letter-spacing: 0.5px;
-            margin-bottom: 25px;
+            font-size: 29px;
+            color: #000;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
             font-weight: normal;
         }
         li {
@@ -249,7 +265,7 @@ body {
             list-style-type: none;
             padding: 1em;
             text-transform: uppercase;
-            color: #fff;
+            color: #000;
             @media (max-width: $xs) {
                 padding: 0.5em;
                 color: #000;
@@ -926,4 +942,30 @@ body {
     top: 0%;
     width: 0%;
     left: 50%;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 55.25%;
+    padding-top: 30px; 
+    height: 0; 
+    overflow: hidden;
+
+    @media( max-width:1280px ) and ( min-width:1024px){
+        max-width: 980px;
+        margin: 0 auto;
+        padding-bottom: 48.25%;
+    }
+    
+    iframe,object,embed{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+p.bold{
+    font-weight: bold;
 }

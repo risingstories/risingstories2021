@@ -131,6 +131,7 @@ ul li { list-style: none; padding: 0; margin: 0; }
 * { box-sizing: border-box; }
 
 a { color: #444; }
+a:hover { color: #a54656; }
 
 @media (max-width: 776px) { h1 { font-size: 1.5em; padding: 15px 0 5px; } }
 
@@ -144,8 +145,8 @@ body { background: #f7f7f7; }
 .flex-box { display: flex; flex-wrap: wrap; }
 @media (max-width: 776px) { .flex-box { display: block; } }
 .flex-box .flex-1 { width: 100%; }
-.flex-box .flex-2 { width: 50%; }
-@media (max-width: 776px) { .flex-box .flex-2 { width: 100%; padding: 15px; } }
+.flex-box .flex-2 { width: 50%; padding: 15px; }
+@media (max-width: 776px) { .flex-box .flex-2 { width: 100%; } }
 .flex-box img { width: 100%; }
 .flex-box a > div { position: relative; }
 .flex-box.full-flex { padding-top: 15px; }
@@ -173,19 +174,21 @@ body { background: #f7f7f7; }
 .main { padding-top: 86px; }
 @media (max-width: 776px) { .main { padding-top: 60px; } }
 
-.kv { background-image: url(../../images/kv-bg.jpg); background-size: auto 100%; background-repeat: no-repeat; background-position: center; position: relative; }
-@media (max-width: 776px) { .kv { margin-bottom: 25px; } }
-.kv .kv-img { position: absolute; z-index: 0; height: 100%; left: 50%; margin-left: -40%; }
+.kv { background-image: url(../../images/kv.png); background-size: cover; background-repeat: no-repeat; background-position: left top; position: relative; height: 600px; }
+@media (max-width: 776px) { .kv { margin-bottom: 25px; height: auto; background-image: url(../../images/kv-bg.jpg); } }
+.kv .kv-img { opacity: 0; position: absolute; z-index: 0; height: 100%; left: 50%; margin-left: -40%; }
 @media (max-width: 776px) { .kv .kv-img { position: relative; margin: 0; left: 0; } }
 .kv .kv-img img { height: 100%; width: auto; }
 @media (max-width: 776px) { .kv .kv-img img { height: auto; width: 100%; margin-top: 25px; } }
 .kv .container { max-width: 1200px; margin: auto; text-align: center; }
-.kv .container .countdown-box { padding-top: 150px; padding-left: 50%; position: relative; padding-bottom: 150px; z-index: 1; }
+.kv .container .countdown-box { padding-top: 50px; padding-left: 50%; position: relative; padding-bottom: 150px; z-index: 1; }
+.kv .container .countdown-box img { max-height: 200px; max-width: 100%; }
+.kv .container .countdown-box img:nth-child(1) { width: 100%; height: auto; max-height: none; }
 @media (max-width: 776px) { .kv .container .countdown-box { padding: 25px; padding-bottom: 45px; } }
-.kv .container .countdown-box #countdown { display: table; margin: auto; padding: 30px; border: solid 3px #fff; }
-@media (max-width: 776px) { .kv .container .countdown-box #countdown { width: 100%; padding: 25px; background: #fff; } }
-.kv .container h1 { font-size: 19px; color: #eee; letter-spacing: 0.5px; margin-bottom: 25px; font-weight: normal; }
-.kv .container li { display: inline-block; font-size: 14px; list-style-type: none; padding: 1em; text-transform: uppercase; color: #fff; }
+.kv .container .countdown-box #countdown { display: table; margin: auto; padding: 15px; }
+@media (max-width: 776px) { .kv .container .countdown-box #countdown { width: 100%; padding: 25px; } }
+.kv .container h1 { font-size: 29px; color: #000; letter-spacing: 1px; margin-bottom: 15px; font-weight: normal; }
+.kv .container li { display: inline-block; font-size: 14px; list-style-type: none; padding: 1em; text-transform: uppercase; color: #000; }
 @media (max-width: 776px) { .kv .container li { padding: 0.5em; color: #000; } }
 .kv .container li span { display: block; font-size: 45px; margin-bottom: 15px; }
 @media (max-width: 776px) { .kv .container li span { font-size: 32px; } }
@@ -221,7 +224,7 @@ body { background: #f7f7f7; }
 .article-content { font-size: 16px; padding-top: 0.5em; line-height: 1.65em; letter-spacing: 0.5px; color: #4d4d4d; border: solid 1px #eee; margin-top: 25px; padding-bottom: 1px; max-width: 770px; margin: 25px auto; background: #fff; padding: 25px; }
 @media (max-width: 776px) { .article-content { padding: 25px; } }
 .article-content a { color: #d6324e; }
-.article-content a:hover { color: #6d1826; }
+.article-content a:hover { color: #a54656; }
 .article-content small { font-size: 12px; }
 .article-content i, .article-content cite, .article-content em, .article-content var, .article-content address, .article-content dfn { font-style: italic; }
 .article-content .fa { font-style: normal; }
@@ -255,7 +258,7 @@ body { background: #f7f7f7; }
 .article-content ol { list-style: none; list-style-position: inside; }
 .article-content ol li { padding-left: 1.5em; counter-increment: count-me; }
 .article-content ol li:before { content: counter(count-me) ". "; counter-increment: item; color: #d6324e; font-size: 16px; }
-.article-content blockquote { border-top: solid 1px #d6324e; border-bottom: solid 1px #d6324e; margin: 2.825em auto; padding: 2.65em 3em 2.65em; text-align: center; color: #6d1826; position: relative; text-align: left; font-size: 18px; line-height: 1.65em; }
+.article-content blockquote { border-top: solid 1px #d6324e; border-bottom: solid 1px #d6324e; margin: 2.825em auto; padding: 2.65em 3em 2.65em; text-align: center; color: #a54656; position: relative; text-align: left; font-size: 18px; line-height: 1.65em; }
 @media (max-width: 776px) { .article-content blockquote { padding: 1.65em 1em 1.65em; } }
 .article-content .by-who { padding-top: 10px; color: #aaa; text-align: center; display: block; font-size: 16px; }
 .article-content .by-who:before { content: "－"; }
@@ -299,3 +302,9 @@ body { background: #f7f7f7; }
 #hamburger-btn.open span:nth-child(3) { -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); }
 
 #hamburger-btn.open span:nth-child(4) { top: 0%; width: 0%; left: 50%; }
+
+.video-responsive { position: relative; padding-bottom: 55.25%; padding-top: 30px; height: 0; overflow: hidden; }
+@media (max-width: 1280px) and (min-width: 1024px) { .video-responsive { max-width: 980px; margin: 0 auto; padding-bottom: 48.25%; } }
+.video-responsive iframe, .video-responsive object, .video-responsive embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+p.bold { font-weight: bold; }
