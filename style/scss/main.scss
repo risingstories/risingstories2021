@@ -414,6 +414,12 @@ body {
     background: #fff;
     padding: 25px;
 
+    span{
+        margin-top: -20px;
+        margin-bottom: 35px;
+        display: block;
+    }
+
     @media (max-width: $xs) {
         padding: 25px;
     }
@@ -734,6 +740,12 @@ body {
             margin: 0 auto;
             width: 100%;
         }
+
+        &.cover{
+            //margin-top: -25px;
+            margin-left: -25px;
+            margin-right: -25px;
+        }
     }
 
     .center-container {
@@ -968,4 +980,17 @@ body {
 
 p.bold{
     font-weight: bold;
+}
+.align-center{
+    text-align: center;
+}
+
+.act-box{
+   p+h5 {
+       margin-top: 45px;
+   }
+
+   h5+p{
+       margin-top: 10px;
+   }
 }
