@@ -28,7 +28,7 @@
                 countdown = document.getElementById("countdown"),
                 content = document.getElementById("content");
   
-            headline.innerText = "It's my birthday!";
+            headline.innerText = "募集截止";
             countdown.style.display = "none";
             content.style.display = "block";
   
