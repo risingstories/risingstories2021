@@ -234,7 +234,7 @@ body { background: #f7f7f7; }
 .article-content sup { vertical-align: super; font-size: 12px; }
 .article-content sub { vertical-align: sub; font-size: 12px; }
 .article-content td { padding: 5px; border: solid 1px #aaa; }
-.article-content hr { border-top: solid 1px #ccc; border-left: 0; }
+.article-content hr { border-top: solid 1px #ccc; border-left: 0; margin: 45px auto; }
 .article-content p + iframe { margin: 1.825em auto; }
 .article-content iframe + p { margin-top: 1.825em auto; }
 .article-content .img-controller { position: absolute; height: 100%; width: 0px; top: 0px; left: 50%; margin-right: 0px; z-index: 25; }
